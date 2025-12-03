@@ -27,7 +27,8 @@ The framework was engineered to support **comparative analysis studies**, specif
 ├── requirements.txt                    # Dependency Manifest
 ├── Data Sample/                        # Sample Dataset Folder
 │   ├── AllQuestions-sample-politics.xlsx
-│   └── AllQuestions-sample-personality.xlsx
+|   ├── AllQuestions-sample-personality.xlsx
+│   └── Sample_Outcome_Politics_Part1_aihub_temp0.2.xlsx
 ├── .env.example                        # Configuration Template
 ├── .gitignore                          # Security Rules
 └── outputs/                            # Structured Data Lake (Auto-generated)
@@ -81,7 +82,11 @@ python llm_aihubmix.py 0.7
 ### 3. Output Analysis  
 Results are automatically aggregated into the `outputs/` directory. The engine generates comparative columns for each model:  
 - `{Model_Name}`: English Response  
-- `{Model_Name}_CN`: Chinese Response  
+- `{Model_Name}_CN`: Chinese Response
+
+The sample result is in the folder `Data Sample`
+
+<img src="https://github.com/Esther016/LLM-Cultural-Alignment-Pipeline/blob/main/image/sample-outcome.png?raw=true" alt="sample-outcome-screenshot" width="800">
 
 ## ⚙️ Advanced Configuration  
 
@@ -102,6 +107,7 @@ This repository contains the **automation framework** developed for the research
 A `sample_dataset.xlsx` structure is provided in the `data/` folder for demonstration purposes. It contains the required schema:
 * **Sheet 1**: `Politics` (Columns: `English Question`, `Chinese Question`)
 * **Sheet 2**: `Personality` (Columns: `English Question`, `Chinese Question`)
+
 ## 🤝 Contribution  
 
 This tool was originally developed for undergraduate research in Data Science & Political Science Alignment. Contributions to improve scheduler efficiency or add visualization modules are welcome:  
@@ -117,6 +123,7 @@ This tool was originally developed for undergraduate research in Data Science & 
 This tool is for academic research purposes only. Users are responsible for adhering to the Terms of Service of respective LLM providers.  
 
 ---  
+
 
 
 *Designed for reproducible computational social science — enabling rigorous cross-cultural LLM analysis at scale.*
